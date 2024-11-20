@@ -4,19 +4,19 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.liufree</groupId>
+    <groupId>com.github.githuplily</groupId>
     <artifactId>xmindparser-java-lily</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
     <description>解析xmind为json文件，支持xmind8和xmind zen类型，返回统一格式</description>
-    <name>xmindparser-java</name>
-    <url>https://github.com/liufree/xmindparser-java</url>
+    <name>xmindparser-java-lily</name>
+    <url>https://github.com/githuplily/xmindparser-java-lily</url>
 
 
     <!--开源协议...-->
     <licenses>
         <license>
-            <name>The Apache Software License, Version 2.0</name>
+            <name>Apache License, Version 2.0</name>
             <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
         </license>
     </licenses>
@@ -24,12 +24,12 @@
     <!--开发者信息-->
     <developers>
         <developer>
-            <id>xpc</id>
-            <name>liufree</name>
-            <email>liufreeo@gmail.com</email>
+            <id>githuplily</id>
+            <name>githuplily</name>
+            <email>xia.li@hilink.co</email>
             <roles>
-                <role>Project Manager</role>
-                <role>Architect</role>
+                <role>Owner</role>
+                <role>Developer</role>
             </roles>
             <timezone>+8</timezone>
         </developer>
@@ -37,9 +37,9 @@
 
     <!--项目在github或其它托管平台的地址-->
     <scm>
-        <connection>https://github.com/liufree/xmindparser-java.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com:liufree/xmindparser-java.git</developerConnection>
-        <url>https://github.com/liufree/xmindparser-java</url>
+        <connection>https://github.com/githuplily/xmindparser-java-lily.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:githuplily/xmindparser-java-lily.git</developerConnection>
+        <url>https://github.com/githuplily/xmindparser-java-lily</url>
     </scm>
 
 
@@ -105,17 +105,17 @@
             <build>
                 <plugins>
                     <!--发布到中央SNAPSHOT仓库插件-->
-<!--                    <plugin>-->
-<!--                        <groupId>org.sonatype.plugins</groupId>-->
-<!--                        <artifactId>nexus-staging-maven-plugin</artifactId>-->
-<!--                        <version>1.6.9</version>-->
-<!--                        <extensions>true</extensions>-->
-<!--                        <configuration>-->
-<!--                            <serverId>ossrh</serverId>-->
-<!--                            <nexusUrl>https://oss.sonatype.org/</nexusUrl>-->
-<!--                            <autoReleaseAfterClose>true</autoReleaseAfterClose>-->
-<!--                        </configuration>-->
-<!--                    </plugin>-->
+                    <plugin>
+                        <groupId>org.sonatype.plugins</groupId>
+                        <artifactId>nexus-staging-maven-plugin</artifactId>
+                        <version>1.6.9</version>
+                        <extensions>true</extensions>
+                        <configuration>
+                            <serverId>ossrh</serverId>
+                            <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
+                            <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                        </configuration>
+                    </plugin>
                     <!--发布到中央RELEASE仓库插件-->
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
@@ -129,6 +129,7 @@
                         </configuration>
                     </plugin>
 
+                    <!--ok-->
                     <!--生成源码插件-->
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
@@ -143,12 +144,14 @@
                             </execution>
                         </executions>
                     </plugin>
+
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-surefire-plugin</artifactId>
                         <version>3.2.2</version>
                     </plugin>
 
+                    <!--ok-->
                     <!--生成API文档插件-->
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
@@ -164,6 +167,7 @@
                         </executions>
                     </plugin>
 
+                    <!--ok-->
                     <!--gpg插件-->
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
@@ -183,15 +187,16 @@
                 </plugins>
             </build>
 
+            <!--ok-->
             <distributionManagement>
                 <snapshotRepository>
                     <!--注意,此id必须与setting.xml中指定的一致-->
                     <id>ossrh</id>
-                    <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+                    <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
                 </snapshotRepository>
                 <repository>
                     <id>release</id>
-                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+                    <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2</url>
                 </repository>
             </distributionManagement>
         </profile>
