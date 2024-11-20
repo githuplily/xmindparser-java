@@ -1,4 +1,4 @@
-package org.liufree.xmindparser;
+package org.lily.xmindparser;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
@@ -7,7 +7,6 @@ import org.dom4j.DocumentException;
 import java.io.IOException;
 
 /**
- * @author liufree liufreeo@gmail.com
  * XmindZen
  *  TODO
  * 2020/4/28 10:26

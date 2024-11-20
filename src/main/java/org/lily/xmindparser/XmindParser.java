@@ -1,4 +1,4 @@
-package org.liufree.xmindparser;
+package org.lily.xmindparser;
 
 import java.io.File;
 import java.io.IOException;
@@ -11,10 +11,9 @@ import com.alibaba.fastjson.JSON;
 
 import org.apache.commons.compress.archivers.ArchiveException;
 import org.dom4j.DocumentException;
-import org.liufree.xmindparser.pojo.JsonRootBean;
+import org.lily.xmindparser.pojo.JsonRootBean;
 
 /**
- * @author liufree liufreeo@gmail.com
  * XmindParser
  *  解析主体
  * 2020/4/27 14:05
@@ -41,8 +40,8 @@ public class XmindParser {
             content = getXmindZenContent(xmindFile,res);
         } else {
             content = getXmindLegacyContent(xmindFile,res);
-        }
 
+        }
         //删除生成的文件夹
         File dir = new File(res);
         boolean flag = deleteDir(dir);
@@ -50,11 +49,12 @@ public class XmindParser {
             // do something
         }
         JsonRootBean jsonRootBean = JSON.parseObject(content, JsonRootBean.class);
-       return(JSON.toJSONString(jsonRootBean,false));
+       return(JSON.toJSONString(jsonRootBean,true));
     }
 
     public static Object parseObject(String xmindFile) throws DocumentException, ArchiveException, IOException {
         String content = parseJson(xmindFile);
+
         JsonRootBean jsonRootBean = JSON.parseObject(content, JsonRootBean.class);
         return jsonRootBean;
     }

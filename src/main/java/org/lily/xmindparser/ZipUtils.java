@@ -1,4 +1,4 @@
-package org.liufree.xmindparser;
+package org.lily.xmindparser;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -14,7 +14,6 @@ import org.apache.commons.compress.archivers.ArchiveException;
 import org.apache.commons.compress.archivers.examples.Expander;
 
 /**
- * @author liufree
  * ZipUtil
  *  zip解压工具
  * 2020/4/14 15:39

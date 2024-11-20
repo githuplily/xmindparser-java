@@ -1,4 +1,4 @@
-package org.liufree.xmindparser;
+package org.lily.xmindparser;
 
 import org.dom4j.*;
 import org.json.JSONObject;
@@ -8,7 +8,6 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * @author liufree liufreeo@gmail.com
  * XmindLegacy
  *  TODO
  * 2020/4/28 10:26

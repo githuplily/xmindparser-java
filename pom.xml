@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.liufree</groupId>
-    <artifactId>xmindparser-java</artifactId>
+    <artifactId>xmindparser-java-lily</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
     <description>解析xmind为json文件，支持xmind8和xmind zen类型，返回统一格式</description>
