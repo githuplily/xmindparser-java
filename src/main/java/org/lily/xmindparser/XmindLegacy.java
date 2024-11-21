@@ -16,12 +16,11 @@ public class XmindLegacy {
 
     /**
      * 返回content.xml和comments.xml合并后的json
-     *
-     * @param xmlContent
-     * @param xmlComments
-     * @return
-     * @throws IOException
-     * @throws DocumentException
+     * @param xmlContent 内容
+     * @param xmlComments 评论
+     * @return 返回字符串
+     * @throws IOException 抛出异常
+     * @throws DocumentException 文件异常
      */
     public static String getContent(String xmlContent, String xmlComments) throws IOException, DocumentException {
         //删除content.xml里面不能识别的字符串

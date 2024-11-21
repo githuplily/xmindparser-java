@@ -48,7 +48,7 @@ public class XmindZen {
     /**
      * 递归转换children
      *
-     * @param children
+     * @param children Json对象
      */
     private static void recursionChildren(JSONObject children) {
         if (children == null) {

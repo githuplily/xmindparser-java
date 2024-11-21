@@ -26,8 +26,8 @@ public class ZipUtils {
      * 找到压缩文件中匹配的子文件，返回的为
      * getContents("comments.xml,
      * unzip
-     * @param subFileNames
-     * @param fileName
+     * @param subFileNames 文件路径
+     * @param fileName 文件名称
      */
     public static Map<String,String> getContents(List<String> subFileNames, String fileName,String extractFileDir) throws IOException, ArchiveException {
         String destFilePath =extractFileDir;
@@ -48,10 +48,10 @@ public class ZipUtils {
 
     /**
      * 返回解压后的文件夹名字
-     * @param fileName
-     * @return
-     * @throws IOException
-     * @throws ArchiveException
+     * @param fileName 文件
+     * @return 返回
+     * @throws IOException 异常
+     * @throws ArchiveException 异常
      */
     public static String extract(String fileName) throws IOException, ArchiveException {
         File file = new File(fileName);

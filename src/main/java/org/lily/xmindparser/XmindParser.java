@@ -26,11 +26,11 @@ public class XmindParser {
     /**
      * 解析脑图文件，返回content整合后的内容
      *
-     * @param xmindFile
-     * @return
-     * @throws IOException
-     * @throws ArchiveException
-     * @throws DocumentException
+     * @param xmindFile xmind文件
+     * @return 返回字符串
+     * @throws IOException io异常
+     * @throws ArchiveException 档案异常
+     * @throws DocumentException 文件异常
      */
     public static String parseJson(String xmindFile) throws IOException, ArchiveException, DocumentException {
         String res = ZipUtils.extract(xmindFile);
@@ -77,7 +77,7 @@ public class XmindParser {
 
 
     /**
-     * @return
+     * @return 返回字符串
      */
     public static String getXmindZenContent(String xmindFile,String extractFileDir) throws IOException, ArchiveException {
         List<String> keys = new ArrayList<>();
@@ -91,7 +91,7 @@ public class XmindParser {
     }
 
     /**
-     * @return
+     * @return 返回字符串
      */
     public static String getXmindLegacyContent(String xmindFile,String extractFileDir) throws IOException, ArchiveException, DocumentException {
         List<String> keys = new ArrayList<>();
