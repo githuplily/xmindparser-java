@@ -37,9 +37,9 @@
 
     <!--项目在github或其它托管平台的地址-->
     <scm>
-        <connection>https://github.com/githuplily/xmindparser-java-lily.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com:githuplily/xmindparser-java-lily.git</developerConnection>
-        <url>https://github.com/githuplily/xmindparser-java-lily</url>
+        <connection>scm:git:git://github.com/githuplily/xmindparser-java-lily.git</connection>
+        <developerConnection>scm:git:ssh://github.com:githuplily/xmindparser-java-lily.git</developerConnection>
+        <url>https://github.com/githuplily/xmindparser-java-lily/tree/master</url>
     </scm>
 
 
@@ -91,43 +91,41 @@
             <artifactId>json</artifactId>
             <version>20231013</version>
         </dependency>
-
-
     </dependencies>
 
-    <profiles>
-        <profile>
-            <!--注意,此id必须与setting.xml中指定的一致-->
-            <id>ossrh</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
+<!--    <profiles>-->
+<!--        <profile>-->
+<!--            &lt;!&ndash;注意,此id必须与setting.xml中指定的一致&ndash;&gt;-->
+<!--            <id>ossrh</id>-->
+<!--            <activation>-->
+<!--                <activeByDefault>true</activeByDefault>-->
+<!--            </activation>-->
             <build>
                 <plugins>
                     <!--发布到中央SNAPSHOT仓库插件-->
-                    <plugin>
-                        <groupId>org.sonatype.plugins</groupId>
-                        <artifactId>nexus-staging-maven-plugin</artifactId>
-                        <version>1.7.0</version>
-                        <extensions>true</extensions>
-                        <configuration>
-                            <serverId>ossrh</serverId>
-                            <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
-                            <autoReleaseAfterClose>true</autoReleaseAfterClose>
-                        </configuration>
-                    </plugin>
+<!--                    <plugin>-->
+<!--                        <groupId>org.sonatype.plugins</groupId>-->
+<!--                        <artifactId>nexus-staging-maven-plugin</artifactId>-->
+<!--                        <version>1.7.0</version>-->
+<!--                        <extensions>true</extensions>-->
+<!--                        <configuration>-->
+<!--                            <serverId>ossrh</serverId>-->
+<!--                            <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>-->
+<!--                            <autoReleaseAfterClose>true</autoReleaseAfterClose>-->
+<!--                        </configuration>-->
+<!--                    </plugin>-->
                     <!--发布到中央RELEASE仓库插件-->
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-release-plugin</artifactId>
-                        <version>2.5.3</version>
-                        <configuration>
-                            <autoVersionSubmodules>true</autoVersionSubmodules>
-                            <useReleaseProfile>false</useReleaseProfile>
-                            <releaseProfiles>release</releaseProfiles>
-                            <goals>deploy</goals>
-                        </configuration>
-                    </plugin>
+<!--                    <plugin>-->
+<!--                        <groupId>org.apache.maven.plugins</groupId>-->
+<!--                        <artifactId>maven-release-plugin</artifactId>-->
+<!--                        <version>2.5.3</version>-->
+<!--                        <configuration>-->
+<!--                            <autoVersionSubmodules>true</autoVersionSubmodules>-->
+<!--                            <useReleaseProfile>false</useReleaseProfile>-->
+<!--                            <releaseProfiles>release</releaseProfiles>-->
+<!--                            <goals>deploy</goals>-->
+<!--                        </configuration>-->
+<!--                    </plugin>-->
 
                     <!--ok-->
                     <!--生成源码插件-->
@@ -143,12 +141,6 @@
                                 </goals>
                             </execution>
                         </executions>
-                    </plugin>
-
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-surefire-plugin</artifactId>
-                        <version>3.2.2</version>
                     </plugin>
 
                     <!--ok-->
@@ -167,6 +159,7 @@
                         </executions>
                     </plugin>
 
+
                     <!--ok-->
                     <!--gpg插件-->
                     <plugin>
@@ -184,6 +177,14 @@
                         </executions>
                     </plugin>
 
+
+<!--                    <plugin>-->
+<!--                        <groupId>org.apache.maven.plugins</groupId>-->
+<!--                        <artifactId>maven-surefire-plugin</artifactId>-->
+<!--                        <version>3.2.2</version>-->
+<!--                    </plugin>-->
+
+
                 </plugins>
             </build>
 
@@ -199,7 +200,7 @@
                     <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2</url>
                 </repository>
             </distributionManagement>
-        </profile>
+<!--        </profile>-->
 
-    </profiles>
+<!--    </profiles>-->
 </project>
