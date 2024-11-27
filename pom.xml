@@ -38,7 +38,7 @@
     <!--项目在github或其它托管平台的地址-->
     <scm>
         <connection>https://github.com/githuplily/xmindparser-java-lily.git</connection>
-        <developerConnection>scm:git:ssh://github.com:githuplily/xmindparser-java-lily.git</developerConnection>
+        <developerConnection>scm:git:ssh://git@github.com:githuplily/xmindparser-java-lily.git</developerConnection>
         <url>https://github.com/githuplily/xmindparser-java-lily/tree/master</url>
     </scm>
 
