@@ -48,6 +48,7 @@ public class XmindParser {
         if (flag) {
             // do something
         }
+//        System.out.println("content:"+content);
         JsonRootBean jsonRootBean = JSON.parseObject(content, JsonRootBean.class);
        return(JSON.toJSONString(jsonRootBean,true));
     }

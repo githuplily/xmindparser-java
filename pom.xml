@@ -6,7 +6,7 @@
 
     <groupId>com.github.githuplily</groupId>
     <artifactId>xmindparser-java-lily</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <packaging>jar</packaging>
     <description>解析xmind为json文件，支持xmind8和xmind zen类型，返回统一格式</description>
     <name>xmindparser-java-lily</name>
@@ -97,7 +97,7 @@
 
     <profiles>
         <profile>
-            <!--注意,此id必须与setting.xml中指定的一致,不要自作聪明改它名字-->
+            <!--注意,此id必须与setting.xml中指定的一致-->
             <id>ossrh</id>
             <activation>
                 <activeByDefault>true</activeByDefault>

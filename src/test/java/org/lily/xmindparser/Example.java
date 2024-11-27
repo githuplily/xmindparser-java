@@ -18,7 +18,7 @@ public class Example {
 //        String fileName = "doc/Xmind8解析.xmind";
         String fileName = "doc/test_case.xmind";
         String res = XmindParser.parseJson(fileName);
-        System.out.println(res);
+//        System.out.println(res);
 
         Object root = XmindParser.parseObject(fileName);
         System.out.println(root);

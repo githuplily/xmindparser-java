@@ -19,6 +19,7 @@ public class Attached {
     private List<Comments> comments;
     private List<Markers> markers;
     private Children children;
+    private List<String> labels;
 
 
 }
