@@ -37,15 +37,15 @@
 
     <!--项目在github或其它托管平台的地址-->
     <scm>
-        <connection>https://github.com/githuplily/xmindparser-java-lily.git</connection>
+        <connection>scm:git:https://github.com/githuplily/xmindparser-java-lily.git</connection>
         <developerConnection>scm:git:ssh://git@github.com:githuplily/xmindparser-java-lily.git</developerConnection>
         <url>https://github.com/githuplily/xmindparser-java-lily/tree/master</url>
     </scm>
 
 
     <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
@@ -109,7 +109,7 @@
                         <version>0.6.0</version>
                         <extensions>true</extensions>
                         <configuration>
-                            <publishingServerId>ossrh</publishingServerId>
+                            <publishingServerId>central</publishingServerId>
                             <autoPublish>true</autoPublish>
 <!--                            <serverId>ossrh</serverId>-->
 <!--                            <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>-->
@@ -199,7 +199,7 @@
             <!--ok-->
             <distributionManagement>
                 <snapshotRepository>
-                    <id>ossrh</id>
+                    <id>central</id>
                     <url>https://s01.oss.sonatype.org/</url>
                 </snapshotRepository>
 <!--                <snapshotRepository>-->
